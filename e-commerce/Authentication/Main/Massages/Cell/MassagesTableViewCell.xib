@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MassagesTableViewCell" rowHeight="127" id="KGk-i7-Jjw" customClass="MassagesTableViewCell" customModule="e_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="307" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxN-jf-uQ4" customClass="CardViewLayout" customModule="e_commerce" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="291" height="111"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="X6d-4Z-Eis">
+                                <rect key="frame" x="8" y="28" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="8p3-Ec-dxo"/>
+                                    <constraint firstAttribute="height" constant="55" id="f0N-aH-Uza"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Ff-eH-6DE">
+                                <rect key="frame" x="79" y="16" width="188" height="79"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fh8-C7-2uD" customClass="CardView">
+                                        <rect key="frame" x="16" y="16" width="85.5" height="47"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pullover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NK3-p2-zel">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.5" height="22.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dear is cotton?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6F-4i-7qh">
+                                                <rect key="frame" x="0.0" y="24.5" width="85.5" height="22.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fh8-C7-2uD" secondAttribute="bottom" constant="16" id="1rU-Ob-a9B"/>
+                                    <constraint firstItem="fh8-C7-2uD" firstAttribute="leading" secondItem="8Ff-eH-6DE" secondAttribute="leading" constant="16" id="7MY-uJ-d63"/>
+                                    <constraint firstItem="fh8-C7-2uD" firstAttribute="top" secondItem="8Ff-eH-6DE" secondAttribute="top" constant="16" id="PhO-R3-cbG"/>
+                                    <constraint firstAttribute="trailing" secondItem="fh8-C7-2uD" secondAttribute="trailing" constant="24" id="uCB-8z-pfA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X6d-4Z-Eis" firstAttribute="centerY" secondItem="fxN-jf-uQ4" secondAttribute="centerY" id="Mmh-n3-VaZ"/>
+                            <constraint firstAttribute="trailing" secondItem="8Ff-eH-6DE" secondAttribute="trailing" constant="24" id="Rk3-Bx-xoi"/>
+                            <constraint firstItem="8Ff-eH-6DE" firstAttribute="top" secondItem="fxN-jf-uQ4" secondAttribute="top" constant="16" id="Vrx-gY-dEP"/>
+                            <constraint firstItem="8Ff-eH-6DE" firstAttribute="leading" secondItem="X6d-4Z-Eis" secondAttribute="trailing" constant="16" id="cGG-zO-NIP"/>
+                            <constraint firstAttribute="bottom" secondItem="8Ff-eH-6DE" secondAttribute="bottom" constant="16" id="fKp-Mf-zjP"/>
+                            <constraint firstItem="X6d-4Z-Eis" firstAttribute="leading" secondItem="fxN-jf-uQ4" secondAttribute="leading" constant="8" id="lEh-h0-DJm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="fxN-jf-uQ4" secondAttribute="trailing" constant="8" id="a2d-Ah-pQ0"/>
+                    <constraint firstItem="fxN-jf-uQ4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="nZc-Rd-xyC"/>
+                    <constraint firstAttribute="bottom" secondItem="fxN-jf-uQ4" secondAttribute="bottom" constant="8" id="slM-oG-iHI"/>
+                    <constraint firstItem="fxN-jf-uQ4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zBw-AC-aKc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="productDescriptionLabel" destination="V6F-4i-7qh" id="Isv-Ci-Z1m"/>
+                <outlet property="productImage" destination="X6d-4Z-Eis" id="w6f-u9-Yrr"/>
+                <outlet property="productNameLabel" destination="NK3-p2-zel" id="5lg-go-rkG"/>
+            </connections>
+            <point key="canvasLocation" x="-48.550724637681164" y="16.40625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="image2" width="93.5" height="93.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
