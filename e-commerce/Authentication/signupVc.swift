@@ -36,8 +36,4 @@ class signupVc: UIViewController {
         signupBtn.addLayer()
 
     }
-    
-
-    
-
 }

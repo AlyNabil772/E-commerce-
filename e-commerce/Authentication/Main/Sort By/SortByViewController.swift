@@ -44,8 +44,5 @@ class SortByViewController: UIViewController {
                 lableColor.textColor = .black
             }
         }
-        
-//        listOfLabels.first(where: {$0.tag == sender.tag})? .textColor = .white
-
     }
 }
