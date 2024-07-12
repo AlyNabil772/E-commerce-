@@ -78,6 +78,11 @@ class NewCollectionVc: UIViewController {
 
 //MARK: - EXTENSIOS
 extension NewCollectionVc: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewcontroler = storyboard.instantiateViewController(withIdentifier: "ProductDetailsVC")
+        navigationController?.pushViewController(viewcontroler, animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return subCategoriesNames.count
         if collectionView == subCategoriesCollectionView { // to return numbers of items for subCategoriesCollectionView

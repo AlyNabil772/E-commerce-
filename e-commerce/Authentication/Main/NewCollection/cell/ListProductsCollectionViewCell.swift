@@ -9,6 +9,7 @@ import UIKit
 
 class ListProductsCollectionViewCell: UICollectionViewCell {
 
+    //MARK: - OUTLETS
     @IBOutlet weak var productImage: UIImageView!
     
     

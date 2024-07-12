@@ -9,6 +9,7 @@ import UIKit
 
 class MassagesViewController: UIViewController {
 
+    //MARK: - OUTLETS
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -16,7 +17,7 @@ class MassagesViewController: UIViewController {
         registerTableView()
         navigationController?.navigationBar.topItem?.title = "Massages"
     }
-     
+    //MARK: - METHODS
     func registerTableView() {
         tableView.register(UINib(nibName: "MassagesTableViewCell", bundle: nil), forCellReuseIdentifier: "MassagesTableViewCell")
         tableView.delegate = self
@@ -26,6 +27,8 @@ class MassagesViewController: UIViewController {
     
 }
 
+
+//MARK: - EXTENSIONS
 extension MassagesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5

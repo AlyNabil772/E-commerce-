@@ -8,7 +8,8 @@
 import UIKit
 
 class GridProductCollectionViewCell: UICollectionViewCell {
-
+ 
+    //MARK: - OUTLETS
     @IBOutlet weak var productImage: UIImageView!
     
     override func awakeFromNib() {

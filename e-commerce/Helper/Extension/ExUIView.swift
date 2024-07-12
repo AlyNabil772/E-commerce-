@@ -20,7 +20,7 @@ extension UIView {
 //    }
     
         // after update
-         // customize layout values----------
+        // customize layout values----------
     func addLayer(cornerRadius: CGFloat = 10, shadowColor: UIColor = UIColor.lightGray, shadowOffsetWidth: CGFloat = 2, shadowOffsetHeight: CGFloat = 3, shadowOpacity:CGFloat = 0.5) {
         self.layer.cornerRadius = cornerRadius
         self.layer.shadowColor = shadowColor.cgColor

@@ -9,8 +9,8 @@ import UIKit
 
 class signupVc: UIViewController {
     
-    // Mark: - Outlets
     
+    //MARK: - OUTLETS
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var nameTextFeild: UITextField!
     @IBOutlet weak var emailView: UIView!
@@ -19,14 +19,7 @@ class signupVc: UIViewController {
     @IBOutlet weak var passwordTextFeild: UITextField!
     @IBOutlet weak var signupBtn: UIButton!
     
-    
-    //Mark Proprties
-    
-    
-    
-    //Mark: - Lifcycle Methods
-    
-    
+    //MARK: - LIFECYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "signup"

@@ -10,9 +10,7 @@ import UIKit
 class SortByViewController: UIViewController {
     
     //MARK: - OUTLET
-   
     @IBOutlet var listOfViews: [UIView]!
-    
     @IBOutlet var listOfLabels: [UILabel]!
     
     //MARK: - LIFECYCLE METHOD

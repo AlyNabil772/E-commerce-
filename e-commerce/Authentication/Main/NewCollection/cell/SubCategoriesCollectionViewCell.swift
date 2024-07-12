@@ -8,7 +8,8 @@
 import UIKit
 
 class SubCategoriesCollectionViewCell: UICollectionViewCell {
-
+    
+    //MARK: - OUTLETS
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var categoryNameLabel: UILabel!
     

@@ -8,12 +8,12 @@
 import UIKit
 
 class categoriesCollectionViewCell: UICollectionViewCell {
+    
+    //MARK: - OUTLETS
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
-
 }

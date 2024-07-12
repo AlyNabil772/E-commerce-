@@ -7,9 +7,8 @@
 
 import UIKit
 
-class CardViewLayout: UIView {
-    
-       // layout class 
+class CardViewLayout: UIView {     // layout class
+
     
     @IBInspectable var cornerRedius: CGFloat = 8
     @IBInspectable var shadowOffsetWidth: CGFloat = 2
