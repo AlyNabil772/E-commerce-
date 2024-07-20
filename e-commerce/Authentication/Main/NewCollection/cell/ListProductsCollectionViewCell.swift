@@ -11,6 +11,9 @@ class ListProductsCollectionViewCell: UICollectionViewCell {
 
     //MARK: - OUTLETS
     @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var brandNameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     
     override func awakeFromNib() {

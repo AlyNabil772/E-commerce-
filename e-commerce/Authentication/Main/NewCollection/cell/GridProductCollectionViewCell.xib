@@ -91,7 +91,10 @@
             </constraints>
             <size key="customSize" width="246" height="263"/>
             <connections>
+                <outlet property="brandNameLabel" destination="a9b-ZA-Hc0" id="emi-HN-EiE"/>
+                <outlet property="priceLabel" destination="o2T-As-uBS" id="Okg-O3-778"/>
                 <outlet property="productImage" destination="Rtn-OH-9mo" id="De3-mh-cuV"/>
+                <outlet property="titleLabel" destination="KXJ-co-fNc" id="IxZ-9L-6yp"/>
             </connections>
             <point key="canvasLocation" x="252.17391304347828" y="-37.165178571428569"/>
         </collectionViewCell>

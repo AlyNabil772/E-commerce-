@@ -9,11 +9,17 @@ import UIKit
 
 class ProductDetailsVC: UIViewController {
     
+    //MARK: - OUTLETS
     @IBOutlet weak var productImageCollectionView: UICollectionView!
     @IBOutlet weak var recommendedProductsCollectionView: UICollectionView!
     
+    //MARK: - PROPETRIES
+    let image: UIImage = UIImage(named: "image1")!
+    var productTitle: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = productTitle
         registerCollectionView()
 
     }
@@ -45,10 +51,11 @@ extension ProductDetailsVC: UICollectionViewDelegate, UICollectionViewDataSource
         switch collectionView {
         case productImageCollectionView:
             let cell = productImageCollectionView.dequeueReusableCell(withReuseIdentifier: "categoriesCollectionViewCell", for: indexPath) as! categoriesCollectionViewCell
-            cell.categoryNameLabel.isHidden = true // hide label 
+            cell.categoryNameLabel.isHidden = true // hide label
             return cell
         default:
             let cell = recommendedProductsCollectionView.dequeueReusableCell(withReuseIdentifier: "GridProductCollectionViewCell", for: indexPath) as! GridProductCollectionViewCell
+            cell.productImage.image = image
             return cell
         }
     }

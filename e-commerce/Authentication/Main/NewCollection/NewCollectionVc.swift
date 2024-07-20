@@ -7,6 +7,23 @@
 
 import UIKit
 
+struct ProductModel {
+    var id: Int
+    var image: String
+    var title: String
+    var brandName: String
+    var price: Int
+    
+    init(id: Int, image: String, title: String, brandName: String, price: Int) {
+        self.id = id
+        self.image = image
+        self.title = title
+        self.brandName = brandName
+        self.price = price
+    }
+   
+}
+ 
 class NewCollectionVc: UIViewController {
     
     //MARK: - OUTLETS
@@ -20,7 +37,7 @@ class NewCollectionVc: UIViewController {
     let images: [UIImage] = [UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image3")!]
     let subCategoriesNames: [String] = ["T-shirts", "Crop tops", "Men's hoodies"]
     var isList: Bool = true // to set list icon to be true
-    
+    var productModelArray: [ProductModel] = [ProductModel(id: 1, image: "Blouse", title: "Blouse", brandName: "Zara", price: 55), ProductModel(id: 2, image: "shirt", title: "shirt", brandName: "Mango", price: 40), ProductModel(id: 3, image: "T-shirt", title: "T-shirt", brandName: "H&M", price: 35)]
         
     //MARK: - LIFCYCLE METHODS
     override func viewDidLoad() {
@@ -80,7 +97,7 @@ class NewCollectionVc: UIViewController {
 extension NewCollectionVc: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewcontroler = storyboard.instantiateViewController(withIdentifier: "ProductDetailsVC")
+        let viewcontroler = storyboard.instantiateViewController(withIdentifier: "ProductDetailsVC") as! ProductDetailsVC
         navigationController?.pushViewController(viewcontroler, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -88,7 +105,7 @@ extension NewCollectionVc: UICollectionViewDelegate, UICollectionViewDataSource 
         if collectionView == subCategoriesCollectionView { // to return numbers of items for subCategoriesCollectionView
             return 3
         } else if collectionView == productsCollectionView { // to return numbers of items for productsCollectionView (list and grid collection)
-            return 5
+            return productModelArray.count
         } else {
             return 0
         }
@@ -102,10 +119,20 @@ extension NewCollectionVc: UICollectionViewDelegate, UICollectionViewDataSource 
         default:
             if isList == true { // condition to showing colloction as a list
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListProductsCollectionViewCell", for: indexPath) as! ListProductsCollectionViewCell
+                let model = productModelArray[indexPath.row]
+                cell.productImage.image = UIImage(named: model.image)
+                cell.titleLabel.text = model.title
+                cell.brandNameLabel.text = model.brandName
+                cell.priceLabel.text = "$\(model.price)"
                 return cell
                 
             } else {  // condition to showing colloction as a grid
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridProductCollectionViewCell", for: indexPath) as! GridProductCollectionViewCell
+                let model = productModelArray[indexPath.row]
+                cell.productImage.image = UIImage(named: model.image)
+                cell.titleLabel.text = model.title
+                cell.brandNameLabel.text = model.brandName
+                cell.priceLabel.text = "$\(model.price)"
                 return cell
             }
         }

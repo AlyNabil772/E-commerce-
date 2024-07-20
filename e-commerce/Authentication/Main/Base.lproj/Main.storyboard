@@ -8,7 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -270,6 +269,78 @@
             </objects>
             <point key="canvasLocation" x="3448" y="795"/>
         </scene>
+        <!--Chat List View Controller-->
+        <scene sceneID="qoT-Pz-3S6">
+            <objects>
+                <viewController storyboardIdentifier="ChatListViewController" id="fqw-36-TDz" customClass="ChatListViewController" customModule="e_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z95-lm-Wgp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OZ8-HB-QQT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-ey-Ip2">
+                                <rect key="frame" x="0.0" y="812" width="414" height="84"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYh-WW-hc4">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="84"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your massage" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y6g-wI-pKy">
+                                                <rect key="frame" x="0.0" y="24" width="334" height="36"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="y6g-wI-pKy" secondAttribute="trailing" id="1QE-TW-hFG"/>
+                                            <constraint firstAttribute="bottom" secondItem="y6g-wI-pKy" secondAttribute="bottom" constant="24" id="N5p-zm-6TI"/>
+                                            <constraint firstItem="y6g-wI-pKy" firstAttribute="top" secondItem="lYh-WW-hc4" secondAttribute="top" constant="24" id="RYO-Q0-Neu"/>
+                                            <constraint firstItem="y6g-wI-pKy" firstAttribute="leading" secondItem="lYh-WW-hc4" secondAttribute="leading" id="Zll-27-6ME"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-he-Q1P">
+                                        <rect key="frame" x="364" y="23" width="50" height="38"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="xUX-3s-WPM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="send icone"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="i7K-he-Q1P" firstAttribute="centerY" secondItem="y6g-wI-pKy" secondAttribute="centerY" id="LzC-AY-vap"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EWl-3B-7So"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OZ8-HB-QQT" firstAttribute="leading" secondItem="EWl-3B-7So" secondAttribute="leading" id="DPv-6h-GSz"/>
+                            <constraint firstItem="EWl-3B-7So" firstAttribute="trailing" secondItem="OZ8-HB-QQT" secondAttribute="trailing" id="NoE-Sm-8uY"/>
+                            <constraint firstItem="OZ8-HB-QQT" firstAttribute="top" secondItem="EWl-3B-7So" secondAttribute="top" id="Q6K-eD-sSh"/>
+                            <constraint firstItem="EWl-3B-7So" firstAttribute="bottom" secondItem="OZ8-HB-QQT" secondAttribute="bottom" constant="50" id="St5-AM-nRH"/>
+                            <constraint firstItem="jgb-ey-Ip2" firstAttribute="leading" secondItem="EWl-3B-7So" secondAttribute="leading" id="TMc-Ph-tpg"/>
+                            <constraint firstAttribute="bottom" secondItem="jgb-ey-Ip2" secondAttribute="bottom" id="dG6-Pr-sGd"/>
+                            <constraint firstItem="EWl-3B-7So" firstAttribute="trailing" secondItem="jgb-ey-Ip2" secondAttribute="trailing" id="wRh-fQ-E8f"/>
+                            <constraint firstItem="jgb-ey-Ip2" firstAttribute="top" secondItem="OZ8-HB-QQT" secondAttribute="bottom" id="x7B-Ep-fx5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="massageTextField" destination="y6g-wI-pKy" id="I4Q-kK-drc"/>
+                        <outlet property="sendTextBtnTapped" destination="i7K-he-Q1P" id="GPj-aY-NAg"/>
+                        <outlet property="tableView" destination="OZ8-HB-QQT" id="k4P-la-cBu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDM-Xu-xnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3447.826086956522" y="1459.8214285714284"/>
+        </scene>
         <!--Home-->
         <scene sceneID="eoJ-fj-DcU">
             <objects>
@@ -287,16 +358,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iDi-y1-pIl">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C6R-Bi-Xfo">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Ug-4M-U26"/>
@@ -614,7 +676,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XG6-As-I2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2277" y="2154"/>
+            <point key="canvasLocation" x="1904" y="2154"/>
         </scene>
         <!--Product DetailsVC-->
         <scene sceneID="wwN-GY-0ge">
@@ -963,7 +1025,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAj-UD-TLP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3276.811594202899" y="2153.5714285714284"/>
+            <point key="canvasLocation" x="2654" y="2154"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ch6-DQ-7ov">
@@ -1050,6 +1112,7 @@
         <image name="filter" width="24" height="24"/>
         <image name="grid" width="25" height="25"/>
         <image name="price list" width="24" height="24"/>
+        <image name="send icone" width="24" height="24"/>
         <image name="serach" width="50" height="50"/>
         <image name="tabBarItem:38l-Ly-myG:image" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">

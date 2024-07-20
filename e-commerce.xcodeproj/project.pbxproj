@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		520194012C40ADDB00E50B56 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520194002C40ADDB00E50B56 /* ProductDetailsVC.swift */; };
+		520194062C41BC2600E50B56 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520194052C41BC2600E50B56 /* ChatListViewController.swift */; };
+		520194092C41BE8600E50B56 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520194072C41BE8600E50B56 /* ChatListTableViewCell.swift */; };
+		5201940A2C41BE8600E50B56 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520194082C41BE8600E50B56 /* ChatListTableViewCell.xib */; };
 		52153A722BB0CF5000690408 /* NewCollectionVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52153A712BB0CF5000690408 /* NewCollectionVc.swift */; };
 		52153A762BB0DD8D00690408 /* SubCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52153A742BB0DD8D00690408 /* SubCategoriesCollectionViewCell.swift */; };
 		52153A772BB0DD8D00690408 /* SubCategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52153A752BB0DD8D00690408 /* SubCategoriesCollectionViewCell.xib */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		520194002C40ADDB00E50B56 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
+		520194052C41BC2600E50B56 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		520194072C41BE8600E50B56 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		520194082C41BE8600E50B56 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
 		52153A712BB0CF5000690408 /* NewCollectionVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionVc.swift; sourceTree = "<group>"; };
 		52153A742BB0DD8D00690408 /* SubCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		52153A752BB0DD8D00690408 /* SubCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -89,6 +95,33 @@
 				520194002C40ADDB00E50B56 /* ProductDetailsVC.swift */,
 			);
 			path = "Product Details";
+			sourceTree = "<group>";
+		};
+		520194022C41BABA00E50B56 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				520194052C41BC2600E50B56 /* ChatListViewController.swift */,
+				520194032C41BADD00E50B56 /* Cell */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		520194032C41BADD00E50B56 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				520194072C41BE8600E50B56 /* ChatListTableViewCell.swift */,
+				520194082C41BE8600E50B56 /* ChatListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		520194042C41BB7C00E50B56 /* MassageList */ = {
+			isa = PBXGroup;
+			children = (
+				5286A8262C3DD3000082AAC2 /* MassagesViewController.swift */,
+				5286A8282C3DD9CB0082AAC2 /* Cell */,
+			);
+			path = MassageList;
 			sourceTree = "<group>";
 		};
 		52153A702BB0CE8A00690408 /* NewCollection */ = {
@@ -162,9 +195,9 @@
 				520193FF2C40AD6F00E50B56 /* Product Details */,
 				5286A8252C3DD1EC0082AAC2 /* Massages */,
 				5227CD092B97C85E008388D5 /* Main.storyboard */,
+				5274E25C2BAA4CF100717E75 /* Home */,
 				52153A702BB0CE8A00690408 /* NewCollection */,
 				5274505F2BC9C4AD004BE60B /* Sort By */,
-				5274E25C2BAA4CF100717E75 /* Home */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -182,8 +215,8 @@
 		5286A8252C3DD1EC0082AAC2 /* Massages */ = {
 			isa = PBXGroup;
 			children = (
-				5286A8262C3DD3000082AAC2 /* MassagesViewController.swift */,
-				5286A8282C3DD9CB0082AAC2 /* Cell */,
+				520194042C41BB7C00E50B56 /* MassageList */,
+				520194022C41BABA00E50B56 /* ChatList */,
 			);
 			path = Massages;
 			sourceTree = "<group>";
@@ -323,6 +356,7 @@
 				52153A772BB0DD8D00690408 /* SubCategoriesCollectionViewCell.xib in Resources */,
 				5227CD0D2B97C862008388D5 /* Assets.xcassets in Resources */,
 				5274505D2BC20457004BE60B /* GridProductCollectionViewCell.xib in Resources */,
+				5201940A2C41BE8600E50B56 /* ChatListTableViewCell.xib in Resources */,
 				5286A82C2C3DDA2F0082AAC2 /* MassagesTableViewCell.xib in Resources */,
 				5227CD0B2B97C85E008388D5 /* Main.storyboard in Resources */,
 				52C0495A2BA5267700C3C82A /* Roboto-Bold.ttf in Resources */,
@@ -349,8 +383,10 @@
 				527351B02BBC965D007494F6 /* CardViewLayout.swift in Sources */,
 				5286A8272C3DD3000082AAC2 /* MassagesViewController.swift in Sources */,
 				527450612BC9C4EE004BE60B /* SortByViewController.swift in Sources */,
+				520194062C41BC2600E50B56 /* ChatListViewController.swift in Sources */,
 				5274505C2BC20457004BE60B /* GridProductCollectionViewCell.swift in Sources */,
 				5227CD182B97CA4A008388D5 /* signinVc.swift in Sources */,
+				520194092C41BE8600E50B56 /* ChatListTableViewCell.swift in Sources */,
 				5227CD062B97C85E008388D5 /* SceneDelegate.swift in Sources */,
 				52153A722BB0CF5000690408 /* NewCollectionVc.swift in Sources */,
 			);

@@ -30,6 +30,12 @@ class MassagesViewController: UIViewController {
 
 //MARK: - EXTENSIONS
 extension MassagesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ChatListViewController")
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
